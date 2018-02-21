@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ぬるすたぐらむ</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="/tops/show">ぬるすたぐらむ</a>
+          </div>
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <% if logged_in? %>
+                  <li><%= link_to "Profile", user_path(current_user.id) %></li>
+                  <li><%= link_to "Logout", session_path(current_user.id), method: :delete %></li>
+                  <li><%= link_to "投稿一覧", blogs_path %></li>
+                  <li><%= link_to "ぬるっとする", new_blog_path %></li>
+             </ul>
+                <% else %>
+                   <li><%= link_to "Sign up", new_user_path %></li>
+                   <li><%= link_to "Login", new_session_path %></li>
+                <% end %>
+                  
+           </div>
+        </div>
+      </nav>
+    </header>
+    
+    <%= yield %>
+    
+    <footer>
+      <p>© 2018ぬるすたぐらむcom</p>
+    </footer>
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+    
+  </body>
+</html>
