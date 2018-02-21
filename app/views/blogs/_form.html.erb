@@ -11,11 +11,15 @@
 
   <div class="field">
     <%= form.text_area :content, id: :blog_content, :maxlength=>"140" %>
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :blog_image %>
-    <%= form.hidden_field :image_cache %>
+  </div>
+  
+  <div class="image">
+   <%= form.label :image %>
+   <%= form.file_field :image, id: :blog_image %>
+   <%= form.hidden_field :image_cache %>
   </div>
 
+<br>
   <div class="actions">
    <button type='submit' name='action' value='send' class="btn btn-primary">ぬるっとする</button>
   </div>

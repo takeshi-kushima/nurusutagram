@@ -1,15 +1,21 @@
 body {
-  background-color: #fff;
+  height: 1500px;
+  background-color: #F0FFFF;
   color: #333;
   margin: 33px;
+  margin-bottom: 0px;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 18px;
+  text-align:center;
+  position: relative;
+  min-height: 100%;
 }
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
 }
 
@@ -20,25 +26,24 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #fff;
 
-  &:visited {
-    color: #666;
-  }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    text-decoration:none;
   }
 }
+
 
 th {
   padding-bottom: 5px;
 }
 
 td {
-  padding: 0 5px 7px;
+  padding:  10px 30px;
 }
+
+
 
 div {
   &.field, &.actions {
@@ -54,6 +59,8 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+   margin-right: auto;
+  margin-left : auto;
 }
 
 #error_explanation {
@@ -62,6 +69,9 @@ div {
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+  margin-right: auto;
+  margin-left : auto;
+}
 
   h2 {
     text-align: left;
@@ -77,8 +87,67 @@ div {
     font-size: 12px;
     list-style: square;
   }
-}
 
 label {
   display: block;
+}
+
+.example {
+  margin-bottom:100px;
+  position:relative;
+  }
+
+.example p {
+  color: white;
+  position: absolute;
+  font-size:2em;
+  font-weight:bold;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  /*文字の装飾は省略*/
+  }
+
+.example img {
+  width: 100%;
+  padding-bottom:100px;
+  }
+  
+.field textarea{
+  height: 300px;
+  width: 600px;
+  padding: 0.8em;
+  outline: none;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 10px;
+}
+
+table{
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left : auto;
+}
+
+footer {
+  width: 100%;
+  background-color:#fff;
+  padding: 20px 0 10px 0;
+  color: #333;
+  margin: auto;
+  font-size: 12px;
+  position: absolute;
+  font-size: 15px;
+  bottom:0;
+}
+
+.image{
+  width: 110px;
+  margin-right: auto;
+  margin-left: auto;
 }

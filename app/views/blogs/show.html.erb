@@ -4,9 +4,10 @@
   <strong>Content:</strong>
   <%= @blog.content %>
 </p>
+
 <p>
   <strong>Image:</strong>
-  <%#= image_tag @blog.image %>
+  <%= image_tag @blog.image %>
 </p>
 
 <% unless @blog.user == current_user %>

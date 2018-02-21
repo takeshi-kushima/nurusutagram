@@ -1,13 +1,14 @@
-<h3>以下の内容で、ぬるっとしてみる？。</h3>
+<h3>以下の内容で、投稿しますか？ｋ</h3>
 
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
  <p>本文:<%= @blog.content %></p>
 
-  <%#= image_tag(@blog.image.url) %>
-  <%#= hidden_field_tag :"cache[image]",@blog.image.cache_name %>
+  <%= image_tag(@blog.image.url) %>
+  <%= hidden_field_tag :"cache[image]",@blog.image.cache_name %>
   
-  <button type='submit' name='action' value='send' class="btn btn-primary">ぬるっとする</button>
+  <br>
+  <button type='submit' name='action' value='send' class="btn btn-primary">投稿する</button>
   <% end %>
   
   <br>
