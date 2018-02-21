@@ -33,6 +33,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        ContactMailer.contact_mail(@blog).deliver
         format.html { redirect_to @blog, notice: '投稿しました' }
         format.json { render :show, status: :created, location: @blog }
       else
